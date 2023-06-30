@@ -1,12 +1,11 @@
-![MICROFOCUS LOGO](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9a/Micro_Focus_logo.svg/220px-Micro_Focus_logo.svg.png)
 # Verifying the Digital Signature of a Micro Focus Extension for Visual Studio Code
 
 
 # Digital Signatures
-The Micro Focus extensions for Visual Studio Code listed below use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) digital signatures to guarantee that the packages you are installing were created by Micro Focus. This readme guides you through the process of verifying these extensions on Windows and on Linux.
+The Micro Focus (now OpenText) extensions for Visual Studio Code listed below use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) digital signatures to guarantee that the packages you are installing were created by Micro Focus. This readme guides you through the process of verifying these extensions on Windows and on Linux.
 
-* [**Micro Focus Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise)
-* [**Micro Focus COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol)
+* [**Micro Focus :tm: Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise)
+* [**Micro Focus :tm: COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol)
 
 
 
