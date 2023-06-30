@@ -4,8 +4,8 @@
 # Digital Signatures
 The Micro Focus (now OpenText) extensions for Visual Studio Code listed below use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) digital signatures to guarantee that the packages you are installing were created by Micro Focus. This readme guides you through the process of verifying these extensions on Windows and on Linux.
 
-* [**Micro Focus :tm: Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise)
-* [**Micro Focus :tm: COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol)
+* [**Micro Focus &trade; Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise)
+* [**Micro Focus &trade; COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol)
 
 
 
@@ -28,8 +28,8 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
   ```
 
 2. Download the required extension file (```.vsix```) from the Visual Studio Marketplace:
-* [**Micro Focus Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise&ssr=false#version-history)
-* [**Micro Focus COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol&ssr=false#version-history)
+* [**Micro Focus &trade; Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfenterprise&ssr=false#version-history)
+* [**Micro Focus &trade; COBOL extension**](https://marketplace.visualstudio.com/items?itemName=Micro-Focus-AMC.mfcobol&ssr=false#version-history)
 
   **Note:** Micro Focus recommends that you always download and install the latest version of the extensions.
 
