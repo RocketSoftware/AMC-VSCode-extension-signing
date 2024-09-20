@@ -1,8 +1,8 @@
-# Verifying the Digital Signature of a Rocket Softwate Inc. Extension for Visual Studio Code
+# Verifying the Digital Signature of a Rocket Software Inc. Extension for Visual Studio Code
 
 
 # Digital Signatures
-The Rocket Software, Inc. extensions for Visual Studio Code listed below use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) digital signatures to guarantee that the packages you are installing were created by Micro Focus. This readme guides you through the process of verifying these extensions on Windows and on Linux.
+The Rocket Software, Inc. extensions for Visual Studio Code listed below use [PGP](https://en.wikipedia.org/wiki/Pretty_Good_Privacy) digital signatures to guarantee that the packages you are installing were created by Rocket Software, Inc. This readme guides you through the process of verifying these extensions on Windows and on Linux.
 
 * [**Rocket Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-enterprise)
 * [**Rocket COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-cobol)
@@ -42,14 +42,14 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 4. Use the checksum listed on this repository to verify the downloaded ```.vsix``` package.
 * On Windows:
   ```
-    sha256sum RocketSoftware.rocket-enterprise-2.0.0.vsix.asc
+    sha256sum RocketSoftware.rocket-enterprise-2.0.0.vsix
     sha256sum RocketSoftware.rocket-cobol-2.0.0.vsix
     sha256sum RocketSoftware.rocket-learncobol-2.0.0.vsix
     sha256sum RocketSoftware.rocket-jvmcobol-2.0.0.vsix
   ```
 * On Linux:
   ```
-    sha256sum ./RocketSoftware.rocket-enterprise-2.0.0.vsix.asc
+    sha256sum ./RocketSoftware.rocket-enterprise-2.0.0.vsix
     sha256sum ./RocketSoftware.rocket-cobol-2.0.0.vsix
     sha256sum ./RocketSoftware.rocket-learncobol-2.0.0.vsix
     sha256sum ./RocketSoftware.rocket-jvmcobol-2.0.0.vsix
@@ -235,4 +235,4 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 - Double-check the checksum of the downloaded .vsix package.
 
 
-If the problem persists, visit the [Micro Focus Community Forum](https://community.microfocus.com/cobol/visualcobol/) or, if you have a maintenance contract for Micro Focus Visual COBOL or Enterprise Developer, contact [Micro Focus Customer Care](https://www.microfocus.com/en-us/support).
+If the problem persists, visit the [Community Forum](https://community.microfocus.com/cobol/visualcobol/) or, if you have a maintenance contract for Rocket&#174; Visual COBOL or Rocket&#174;Enterprise Developer, contact [Rocket Software Customer Care](https://www.microfocus.com/en-us/support).
