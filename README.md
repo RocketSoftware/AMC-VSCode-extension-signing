@@ -59,7 +59,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 
   **Important:** Version 2.0.x of the COBOL, JVM COBOL, Enterprise and Learn COBOL extensions are all signed with a Rocket Software public key.
 
-  **Important:** From version 1.0.55 to 1.0.59 of the COBOL and Enterprise extensions, version 1.0.11 to 1.0.13 of Learn COBOL extension and version 1.0.2 to 1.0.3 of the JVM COBOL extension are all signed with an OpenText public key. Prior to this all extensions were signed with a Micro Focus public key. Details are provided below to describe how to verify with both the OpenText and Micro Focus public keys.
+  **Important:** Versions 1.0.55 to 1.0.59 of the COBOL and Enterprise extensions, versions 1.0.11 to 1.0.13 of Learn COBOL extension and versions 1.0.2 to 1.0.3 of the JVM COBOL extension are all signed with an OpenText public key. Prior to this all extensions were signed with a Micro Focus public key. Details are provided below to describe how to verify with both the OpenText and Micro Focus public keys.
 
 ### To verify using the Rocket Software public key
 5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
