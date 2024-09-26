@@ -57,9 +57,11 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 
   **Important:** If a generated checksum does not match the value listed for the same release on this repository, you need to download the package again and repeat the verification process.
 
-  **Important:** from version 1.0.55 of the COBOL and Enterprise extensions, version 1.0.11 of Learn COBOL extension and version 1.0.2 of the JVM COBOL extension are all signed with an OpenText public key. Details are provided below to describe how to verify with both the OpenText and Micro Focus public keys.
+  **Important:** Version 2.0.x of the COBOL, JVM COBOL, Enterprise and Learn COBOL extensions are all signed with a Rocket Software public key.
 
-### To verify using the Open Text public key
+  **Important:** From version 1.0.55 to 1.0.59 of the COBOL and Enterprise extensions, version 1.0.11 to 1.0.13 of Learn COBOL extension and version 1.0.2 to 1.0.3 of the JVM COBOL extension are all signed with an OpenText public key. Prior to this all extensions were signed with a Micro Focus public key. Details are provided below to describe how to verify with both the OpenText and Micro Focus public keys.
+
+### To verify using the Rocket Software public key
 5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
 
 * On Windows:
@@ -139,6 +141,86 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
   The output from the verification must report a valid signature from Rocket Software, Inc.
 
 
+### To verify using the Open Text public key
+5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
+
+* On Windows:
+  ```
+    "C:\Program Files\7-Zip\7z.exe" e Micro-Focus-AMC.mfcobol-1.0.55.vsix extension\ot-package-sign.pub
+  ```
+* On Linux:
+  ```
+    unzip Micro-Focus-AMC.mfcobol-1.0.55.vsix extension/ot-package-sign.pub
+  ```
+
+6. To view the fingerprint of the exported public key, run the following command:
+* On Windows:
+  ```
+    gpg --import --import-options show-only --dry-run ot-package-sign.pub
+  ```
+* On Linux:
+  ```
+    gpg2 --import --import-options show-only --dry-run extension/ot-package-sign.pub
+  ```
+  The expected output is in a format similar to the following where the asterisks indicate the fingerprint value:
+  ```
+    pub   rsa4096 2023-04-20 [SC]
+      **23DF1905A3DF04718BDFD1F5F8EEBBCDE08E4762**
+    uid                      OT-package-sign (Open Text Corporation package signing certificate 20230420) <OT-package-sign@opentext.com>
+  ```
+  **Important:** To verify that the public key is correct, the fingerprint must match the following value:
+
+   **Key fingerprint: 23DF 1905 A3DF 0471 8BDF D1F5 F8EE BBCD E08E 4762**
+   
+   **You should only proceed with importing the public key into the local keystore if the key fingerprint matches this value.**
+
+7. To import the public key into the local keystore:
+* On Windows:
+  ```
+    gpg --import ot-package-sign.pub
+  ```
+* Linux:
+  ```
+    gpg2 --import extension/ot-package-sign.pub
+  ```
+
+8. Once imported, you need to sign the key in your keystore with a private key. 
+
+    This is required so that you can provide information to your local system that the signing certificate imported in this step has passed all the checks performed in the previous steps. If you do not provide this information, the system reports that the imported certificate is not trusted when you try to verify the ```.vsix``` package.
+
+    You need an existing private key to sign the key. Follow the prompts to sign the public key:
+* On Windows:
+  ```
+    gpg --lsign-key "23DF 1905 A3DF 0471 8BDF D1F5 F8EE BBCD E08E 4762"
+  ```
+* On Linux:
+  ```
+    gpg2 --lsign-key "23DF 1905 A3DF 0471 8BDF D1F5 F8EE BBCD E08E 4762"
+  ```
+
+  **Important:** If you receive the following output, it indicates that no private key exists. In this case you need to create a new private key and retry this step:
+
+  ```
+    gpg: no default secret key: No secret key 
+    Key has not been changed, so no save is needed. 
+  ```
+
+10. To verify the ```.vsix``` package using the signature file:
+* On Windows:
+  ```
+    gpg --verify Micro-Focus-AMC.mfcobol-1.0.55.vsix.asc Micro-Focus-AMC.mfcobol-1.0.55.vsix
+    gpg --verify Micro-Focus-AMC.mfenterprise-1.0.55.vsix.asc Micro-Focus-AMC.mfenterprise-1.0.55.vsix
+    gpg --verify Micro-Focus-AMC.learncobol-1.0.11.vsix.asc Micro-Focus-AMC.learncobol-1.0.11.vsix
+  ```
+* On Linux:
+  ```
+    gpg2 --verify Micro-Focus-AMC.mfcobol-1.0.55.vsix.asc Micro-Focus-AMC.mfcobol-1.0.55.vsix
+    gpg2 --verify Micro-Focus-AMC.mfenterprise-1.0.55.vsix.asc Micro-Focus-AMC.mfenterprise-1.0.55.vsix
+    gpg2 --verify Micro-Focus-AMC.learncobol-1.0.11.vsix.asc Micro-Focus-AMC.learncobol-1.0.11.vsix
+  ```
+  The output from the verification must report a valid signature from Open Text Corporation.
+
+
 ### To verify using the Micro Focus public key
 5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
 
@@ -208,13 +290,13 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
   ```
     gpg --verify Micro-Focus-AMC.mfcobol-1.0.54.vsix.asc Micro-Focus-AMC.mfcobol-1.0.54.vsix
     gpg --verify Micro-Focus-AMC.mfenterprise-1.0.54.vsix.asc Micro-Focus-AMC.mfenterprise-1.0.54.vsix
-    gpg --verify RocketSoftware.rocket-learncobol-2.0.0.vsix.asc RocketSoftware.rocket-learncobol-2.0.0.vsix
+    gpg --verify Micro-Focus-AMC.learncobol-1.0.10.vsix.asc Micro-Focus-AMC.learncobol-1.0.10.vsix
   ```
 * On Linux:
   ```
     gpg2 --verify Micro-Focus-AMC.mfcobol-1.0.54.vsix.asc Micro-Focus-AMC.mfcobol-1.0.54.vsix
     gpg2 --verify Micro-Focus-AMC.mfenterprise-1.0.54.vsix.asc Micro-Focus-AMC.mfenterprise-1.0.54.vsix
-    gpg2 --verify RocketSoftware.rocket-learncobol-2.0.0.vsix.asc RocketSoftware.rocket-learncobol-2.0.0.vsix
+    gpg2 --verify Micro-Focus-AMC.learncobol-1.0.10.vsix.asc Micro-Focus-AMC.learncobol-1.0.10.vsix
   ```
   The output from the verification must report a valid signature from Micro Focus International.
 
