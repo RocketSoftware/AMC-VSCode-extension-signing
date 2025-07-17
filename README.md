@@ -8,7 +8,7 @@ The Rocket Software, Inc. extensions for Visual Studio Code listed below use [PG
 * [**Rocket COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-cobol)
 * [**Rocket Learn COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-learncobol)
 * [**Rocket JVM COBOL**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-jvmcobol)
-
+* [**Rocket ACUCOBOL-GT extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-acucobolgt)
 
 
 ## Software Requirements
@@ -34,6 +34,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 * [**Rocket COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-cobol&ssr=false#version-history)
 * [**Rocket Learn COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-learncobol&ssr=false#version-history)
 * [**Rocket JVM COBOL**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-jvmcobol&ssr=false#version-history)
+* [**Rocket ACUCOBOL-GT extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-acucobolgt&ssr=false#version-history)
 
   **Note:** We recommend that you always download and install the latest version of the extensions.
 
