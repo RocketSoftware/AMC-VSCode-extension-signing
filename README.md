@@ -47,6 +47,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     sha256sum RocketSoftware.rocket-cobol-2.0.0.vsix
     sha256sum RocketSoftware.rocket-learncobol-2.0.0.vsix
     sha256sum RocketSoftware.rocket-jvmcobol-2.0.0.vsix
+    sha256sum RocketSoftware.rocket-acucobolgt-1.0.0.vsix
   ```
 * On Linux:
   ```
@@ -54,6 +55,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     sha256sum ./RocketSoftware.rocket-cobol-2.0.0.vsix
     sha256sum ./RocketSoftware.rocket-learncobol-2.0.0.vsix
     sha256sum ./RocketSoftware.rocket-jvmcobol-2.0.0.vsix
+    sha256sum ./RocketSoftware.rocket-acucobolgt-1.0.0.vsix
   ```
 
   **Important:** If a generated checksum does not match the value listed for the same release on this repository, you need to download the package again and repeat the verification process.
@@ -132,12 +134,14 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     gpg --verify RocketSoftware.rocket-cobol-2.0.0.vsix.asc RocketSoftware.rocket-cobol-2.0.0.vsix
     gpg --verify RocketSoftware.rocket-enterprise-2.0.0.vsix.asc RocketSoftware.rocket-enterprise-2.0.0.vsix
     gpg --verify RocketSoftware.rocket-learncobol-2.0.0.vsix.asc RocketSoftware.rocket-learncobol-2.0.0.vsix
+    gpg --verify RocketSoftware.rocket-acucobolgt-1.0.0.vsix.asc RocketSoftware.rocket-acucobolgt-1.0.0.vsix
   ```
 * On Linux:
   ```
     gpg2 --verify RocketSoftware.rocket-cobol-2.0.0.vsix.asc RocketSoftware.rocket-cobol-2.0.0.vsix
     gpg2 --verify RocketSoftware.rocket-enterprise-2.0.0.vsix.asc RocketSoftware.rocket-enterprise-2.0.0.vsix
     gpg2 --verify RocketSoftware.rocket-learncobol-2.0.0.vsix.asc RocketSoftware.rocket-learncobol-2.0.0.vsix
+    gpg2 --verify RocketSoftware.rocket-acucobolgt-1.0.0.vsix.asc RocketSoftware.rocket-acucobolgt-1.0.0.vsix
   ```
   The output from the verification must report a valid signature from Rocket Software, Inc.
 
