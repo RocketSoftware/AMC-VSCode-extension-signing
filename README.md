@@ -322,4 +322,5 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 - Double-check the checksum of the downloaded .vsix package.
 
 
-If the problem persists, visit the [Community Forum](https://community.microfocus.com/cobol/visualcobol/) or, if you have a maintenance contract for Rocket&#174; Visual COBOL or Rocket&#174;Enterprise Developer, contact [Rocket Software Customer Care](https://www.microfocus.com/en-us/support).
+If the problem persists, visit the [Community Forum](https://my.rocketsoftware.com/RocketCommunity/s/knowledge-base) or, if you have a maintenance contract for Rocket&#174; Visual COBOL or Rocket&#174;Enterprise Developer, contact [Rocket Software Customer Care](https://www.rocketsoftware.com/en-us/support).
+
