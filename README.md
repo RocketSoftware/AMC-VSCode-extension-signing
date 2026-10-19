@@ -30,18 +30,9 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     set PATH=%PATH%;C:\Program Files (x86)\Gpg4win\bin
   ```
 
-2. Download the required extension file (```.vsix```) from the Visual Studio Marketplace:
-* [**Rocket Enterprise extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-enterprise&ssr=false#version-history)
-* [**Rocket COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-cobol&ssr=false#version-history)
-* [**Rocket Learn COBOL extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-learncobol&ssr=false#version-history)
-* [**Rocket JVM COBOL**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-jvmcobol&ssr=false#version-history)
-* [**Rocket ACUCOBOL-GT extension**](https://marketplace.visualstudio.com/items?itemName=RocketSoftware.rocket-acucobolgt&ssr=false#version-history)
+2. Select the release from this GitHub repository which matches the version of the extension(s) you have downloaded. Download the signature (```.asc```) file for the selected release. 
 
-  **Note:** We recommend that you always download and install the latest version of the extensions.
-
-3. Select the release from this GitHub repository which matches the version of the extension(s) you have downloaded. Download the signature (```.asc```) file for the selected release. 
-
-4. Use the checksum listed on this repository to verify the downloaded ```.vsix``` package.
+3. Use the checksum listed on this repository to verify the downloaded ```.vsix``` package.
 * On Windows:
   ```
     sha256sum RocketSoftware.rocket-enterprise-2.0.0.vsix
@@ -66,7 +57,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
   **Important:** Versions 1.0.55 to 1.0.59 of the COBOL and Enterprise extensions, versions 1.0.11 to 1.0.13 of Learn COBOL extension and versions 1.0.2 to 1.0.3 of the JVM COBOL extension are all signed with an OpenText public key. Prior to this all extensions were signed with a Micro Focus public key. Details are provided below to describe how to verify with both the OpenText and Micro Focus public keys.
 
 ### To verify using the Rocket Software public key
-5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
+4. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
 
 * On Windows:
   ```
@@ -77,7 +68,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     unzip RocketSoftware.rocket-cobol-2.0.0.vsix extension/Rocket.package-sign.pub
   ```
 
-6. To view the fingerprint of the exported public key, run the following command:
+5. To view the fingerprint of the exported public key, run the following command:
 * On Windows:
   ```
     gpg --import --import-options show-only --dry-run Rocket.package-sign.pub
@@ -98,7 +89,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
    
    **You should only proceed with importing the public key into the local keystore if the key fingerprint matches this value.**
 
-7. To import the public key into the local keystore:
+6. To import the public key into the local keystore:
 * On Windows:
   ```
     gpg --import Rocket.package-sign.pub
@@ -108,7 +99,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     gpg2 --import extension/Rocket.package-sign.pub
   ```
 
-8. Once imported, you need to sign the key in your keystore with a private key. 
+7. Once imported, you need to sign the key in your keystore with a private key. 
 
     This is required so that you can provide information to your local system that the signing certificate imported in this step has passed all the checks performed in the previous steps. If you do not provide this information, the system reports that the imported certificate is not trusted when you try to verify the ```.vsix``` package.
 
@@ -129,7 +120,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     Key has not been changed, so no save is needed. 
   ```
 
-10. To verify the ```.vsix``` package using the signature file:
+8. To verify the ```.vsix``` package using the signature file:
 * On Windows:
   ```
     gpg --verify RocketSoftware.rocket-cobol-2.0.0.vsix.asc RocketSoftware.rocket-cobol-2.0.0.vsix
@@ -211,7 +202,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     Key has not been changed, so no save is needed. 
   ```
 
-10. To verify the ```.vsix``` package using the signature file:
+9. To verify the ```.vsix``` package using the signature file:
 * On Windows:
   ```
     gpg --verify Micro-Focus-AMC.mfcobol-1.0.55.vsix.asc Micro-Focus-AMC.mfcobol-1.0.55.vsix
@@ -228,7 +219,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 
 
 ### To verify using the Micro Focus public key
-5. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
+4. Extract the public key from the ```.vsix``` package. The ```.vsix``` package can be treated as a ZIP archive so you can use any archive utility such az 7-zip on Windows:
 
 * On Windows:
   ```
@@ -239,7 +230,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     unzip Micro-Focus-AMC.mfcobol-1.0.54.vsix extension/MicroFocusGPGPackageSign.pub
   ```
 
-6. To view the fingerprint of the exported public key, run the following command:
+5. To view the fingerprint of the exported public key, run the following command:
 * On Windows:
   ```
     gpg --import --import-options show-only --dry-run extension\MicroFocusGPGPackageSign.pub
@@ -260,7 +251,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
 
    **You should only proceed with importing the public key into the local keystore if the key fingerprint matches this value.**
 
-7. To import the public key into the local keystore:
+6. To import the public key into the local keystore:
 * On Windows:
   ```
     gpg --import extension\MicroFocusGPGPackageSign.pub
@@ -270,7 +261,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     gpg2 --import extension/MicroFocusGPGPackageSign.pub
   ```
 
-8. Once imported, you need to sign the key in your keystore with a private key. 
+7. Once imported, you need to sign the key in your keystore with a private key. 
 
     This is required so that you can provide information to your local system that the signing certificate imported in this step has passed all the checks performed in the previous steps. If you do not provide this information, the system reports that the imported certificate is not trusted when you try to verify the ```.vsix``` package.
 
@@ -291,7 +282,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
     Key has not been changed, so no save is needed. 
   ```
 
-10. To verify the ```.vsix``` package using the signature file:
+8. To verify the ```.vsix``` package using the signature file:
 * On Windows:
   ```
     gpg --verify Micro-Focus-AMC.mfcobol-1.0.54.vsix.asc Micro-Focus-AMC.mfcobol-1.0.54.vsix
@@ -306,7 +297,7 @@ This readme includes example instructions for both Windows (using Gpg4win) and R
   ```
   The output from the verification must report a valid signature from Micro Focus International.
 
-11. If the verification process reports an error, check the **Common Issues** below.
+9. If the verification process reports an error, check the **Common Issues** below.
 
 ## Common Issues
 **Issue:**
